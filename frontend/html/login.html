@@ -1,7 +1,7 @@
 <!--
 5. Верстка форм логина и регистрации
 
-HTML разместить в файлах login.html и signup.html соответственно.
+HTML разместить в файлах login.html и signup.css.html соответственно.
 
 Обратить внимание на:
 
@@ -18,16 +18,128 @@ HTML разместить в файлах login.html и signup.html соотве
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+            crossorigin="anonymous"></script>
+    <link href="../css/base.css" rel="stylesheet" type="text/css">
+    <link href="../css/login.css" rel="stylesheet" type="text/css">
+    <title>Login</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
-
-    <title>Title</title>
 </head>
 <body>
 
-<button type="button" class="btn btn-primary">Primary</button>
-<button type="button" class="btn btn-secondary">Secondary</button>
+<nav class="navbar navbar-expand-lg navbar navbar-dark bg-primary">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">
+            <img src="../img/kot.jpeg" alt="logoCompany" width="60" height="60"
+                 class="d-inline-block align-text-top">
+            SlavEkAns
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-nav me-auto mb-2 mb-lg-0">
+            <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            </form>
+            <button type="button" class="btn btn-primary">Ask</button>
+        </div>
+        <form class="d-flex">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <div class="navbar-avatar">
+                        <img alt="avatar" src="../img/kot.jpeg" width="80" height="80">
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Log out</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="user_page.html">Settings</a>
+                </li>
+            </ul>
+        </form>
+    </div>
+</nav>
+
+
+<div class="baseLogin">
+    <div class="row">
+        <div class="col-9">
+            <!--      Логин      -->
+            <div class="container-fluid login">
+                <h1 class="text-xl-center"> Log In </h1>
+
+                <form class="row g-3 bodyLogin">
+                    <div class="row justify-content-center loginBlock">
+                        <div class="col-md-6">
+                            <label for="validationDefaultUsername" class="form-label">Имя пользователя</label>
+                            <div class="input-group">
+                                <span class="input-group-text" id="inputGroupPrepend2">@</span>
+                                <input type="text" class="form-control" id="validationDefaultUsername"
+                                       aria-describedby="inputGroupPrepend2" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center loginBlock">
+                        <div class="col-md-6">
+                            <label for="validationDefaultPassword" class="form-label">Пароль</label>
+                            <div class="input-group">
+                                <input type="password" class="form-control" id="validationDefaultPassword"
+                                       aria-describedby="inputGroupPrepend2" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-6">
+                            <p>
+                                <a href="signup.html" class="text-primary text-decoration-none">Еще не
+                                    зарегистрирован</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center loginBlock">
+                        <div class="col-6">
+                            <button class="btn btn-primary" type="submit">Зарегистрироваться</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="col-3 info">
+            <div class="tags ">
+                <h2 class="font-weight-bold">Popular tags</h2>
+                <p class="text-xl-center font-monospace">
+                    <a class="text-primary">Python</a>
+                    <a>SQL</a>
+                    <a>GoooooooooooooO</a>
+                </p>
+                <p class="text-xl-center font-monospace">
+                    <a class="text-primary">Python</a>
+                    <a>SQL</a>
+                    <a>Go</a>
+                </p>
+                <p class="text-xl-center font-monospace">
+                    <a class="text-primary">Python</a>
+                    <a>SQL</a>
+                    <a>Go</a>
+                </p>
+            </div>
+            <div class="members ">
+                <h2 class="font-weight-bold">Best Members</h2>
+                <p><a href="#" class="text-info text-decoration-none">Mr Gosha</a></p>
+                <p><a href="#" class="text-info text-decoration-none">Mr Gosha</a></p>
+                <p><a href="#" class="text-info text-decoration-none">Mr Gosha</a></p>
+                <p><a href="#" class="text-info text-decoration-none">Mr Gosha</a></p>
+                <p><a href="#" class="text-info text-decoration-none">Mr Gosha</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 </body>
 </html>
