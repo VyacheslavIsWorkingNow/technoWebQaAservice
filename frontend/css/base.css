@@ -1,0 +1,21 @@
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15%;
+}
+
+.base {
+    margin: 5px;
+    padding: 5px;
+}
+
+.tags {
+    margin: 5px;
+    padding: 5px;
+}
+
+.members {
+    margin: 5px;
+    padding: 5px;
+    line-height: 90%;
+}
