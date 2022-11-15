@@ -14,12 +14,15 @@ HTML разместить в файле ask.html.
 
 
 <!DOCTYPE html>
+
+{% load static %}
+
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <link href="../static/css/bootstrap.css" rel="stylesheet" type="text/css">
-    <link href="../static/css/base.css" rel="stylesheet" type="text/css">
-    <link href="../static/css/ask.css" rel="stylesheet" type="text/css">
+    <link href="{% static "css/bootstrap.css" %}" rel="stylesheet" type="text/css">
+    <link href="{% static "css/base.css" %}" rel="stylesheet" type="text/css">
+    <link href="{% static "css/ask.css" %}" rel="stylesheet" type="text/css">
     <title>ASK</title>
 </head>
 <body>

@@ -16,10 +16,13 @@
 
 <!DOCTYPE html>
 <html lang="ru">
+
+{% load static %}
+
 <head>
     <meta charset="UTF-8">
-    <link href="../static/css/bootstrap.css" rel="stylesheet" type="text/css">
-    <link href="../static/css/base.css" rel="stylesheet" type="text/css">
+    <link href="{% static "css/bootstrap.css" %}" rel="stylesheet" type="text/css">
+    <link href="{% static "css/base.css" %}" rel="stylesheet" type="text/css">
     <title>BASE</title>
 </head>
 <body>
@@ -30,7 +33,7 @@
 <nav class="navbar navbar-expand-lg navbar navbar-dark bg-primary">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">
-            <img src="../static/img/kot.jpeg" alt="logoCompany" width="60" height="60"
+            <img src="{% static "img/kot.jpeg" %}" alt="logoCompany" width="60" height="60"
                  class="d-inline-block align-text-top">
             SlavEkAns
         </a>
@@ -62,7 +65,7 @@
 <nav class="navbar navbar-expand-lg navbar navbar-dark bg-primary">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">
-            <img src="../static/img/kot.jpeg" alt="logoCompany" width="60" height="60"
+            <img src="{% static "img/kot.jpeg" %}" alt="logoCompany" width="60" height="60"
                  class="d-inline-block align-text-top">
             SlavEkAns
         </a>
@@ -80,7 +83,7 @@
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
                     <div class="navbar-avatar">
-                        <img alt="avatar" src="../static/img/kot.jpeg" width="60" height="60">
+                        <img alt="avatar" src="{% static "img/kot.jpeg" %}" width="60" height="60">
                     </div>
                 </li>
                 <li class="nav-item">
