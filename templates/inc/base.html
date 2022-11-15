@@ -74,7 +74,7 @@
                     <a class="nav-link active" aria-current="page" href="#">Log out</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" href="../user_page.html">Settings</a>
+                    <a class="nav-link active" href="{% url 'user' %}">Settings</a>
                 </li>
             </ul>
         </form>
@@ -101,20 +101,20 @@
         <div class="col-3 info">
             <div class="tags ">
                 <h2 class="font-weight-bold">Popular tags</h2>
-                <p class="text-xl-center font-monospace">
-                    <a class="text-primary">Python</a>
-                    <a>SQL</a>
-                    <a>GoooooooooooooO</a>
+                <p class="text-xl-center font-monospace text-primary">
+                    <a href="{% url 'tag_index' your_tag="Python" %}" class="text-decoration-none">Python</a>
+                    <a href="{% url 'tag_index' your_tag="SQL" %}" class="text-decoration-none">SQL</a>
+                    <a href="{% url 'tag_index' your_tag="Goooooo" %}" class="text-decoration-none">GoooooooooooooO</a>
                 </p>
-                <p class="text-xl-center font-monospace">
-                    <a class="text-primary">Python</a>
-                    <a>SQL</a>
-                    <a>Go</a>
+                <p class="text-xl-center font-monospace text-primary">
+                    <a href="{% url 'tag_index' your_tag="Python" %}" class="text-decoration-none">Python</a>
+                    <a href="{% url 'tag_index' your_tag="SQL" %}" class="text-decoration-none">SQL</a>
+                    <a href="{% url 'tag_index' your_tag="Goooooo" %}" class="text-decoration-none">GoooooooooooooO</a>
                 </p>
-                <p class="text-xl-center font-monospace">
-                    <a class="text-primary">Python</a>
-                    <a>SQL</a>
-                    <a>Go</a>
+                <p class="text-xl-center font-monospace text-primary">
+                    <a href="{% url 'tag_index' your_tag="Python" %}" class="text-decoration-none">Python</a>
+                    <a href="{% url 'tag_index' your_tag="SQL" %}" class="text-decoration-none">SQL</a>
+                    <a href="{% url 'tag_index' your_tag="Goooooo" %}" class="text-decoration-none">GoooooooooooooO</a>
                 </p>
             </div>
             <div class="members ">

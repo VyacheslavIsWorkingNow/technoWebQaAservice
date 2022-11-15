@@ -1,0 +1,45 @@
+{% load static %}
+
+<!--      Шаблон самого вопроса      -->
+
+<div class="card m-3">
+    <div class="card-header">
+        <h4><a href="{% url 'question' question_id=1 %}" class="headerQuestion text-decoration-none">
+            The user's question itself?
+        </a></h4>
+    </div>
+    <div class="card-body">
+        <div class="row">
+
+            <!--                            USER PROFILE    -->
+
+            {% include 'inc/user_profile_question.html' %}
+
+            <!--                            QUESTION        -->
+            <div class="col-9">
+                <h5 class="card-title">From: <a href="{% url 'login' %}" class="text-decoration-none">
+                    AbraKadABra</a></h5>
+                <div class="col-md-9">
+                    <p class="card-text text-truncate">
+                        With supporting text below as a natural lead-in to additional
+                        content. With supporting text below as a natural lead-in to additional
+                        content.
+                    </p>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-3">
+                        <a href="{% url 'question' question_id=1 %}" class="btn btn-primary">To the answers</a>
+                    </div>
+                    <div class="col-9">
+                        <p class="font-monospace tagsQuestionId"> tags:
+                            <a href="{% url 'tag_index' your_tag="Python" %}" class="text-decoration-none"> Python </a>
+                            <a href="{% url 'tag_index' your_tag="Python" %}" class="text-decoration-none"> Python </a>
+                            <a href="{% url 'tag_index' your_tag="Python" %}" class="text-decoration-none"> Python </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

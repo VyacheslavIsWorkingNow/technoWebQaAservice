@@ -24,7 +24,7 @@ def question(request, question_id: int):
             'id': i,
             'text': 'text' + str(i)
         })
-    return HttpResponse(f'question id = {question_id}')
+    return render(request, 'question.html')
 
 
 def login(request):
