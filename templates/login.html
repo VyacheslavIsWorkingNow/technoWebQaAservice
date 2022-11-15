@@ -1,144 +1,47 @@
-<!--
-5. Верстка форм логина и регистрации
-
-HTML разместить в файлах login.html и signup.css.html соответственно.
-
-Обратить внимание на:
-
-Вывод сообщения об ошибках формы и подсказок к полям.
- В верстке должны отображаться ошибки, чтобы было понятно как они сверстаны. Можно найти пример на макетах ниже;
-Ширину полей ввода;
-Максимальную длину полей ввода.
-
-
--->
-
-
-<!DOCTYPE html>
+{% extends "inc/base.html" %}
 
 {% load static %}
 
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <link href="{% static "css/bootstrap.css" %}" rel="stylesheet" type="text/css">
-    <link href="{% static "css/base.css" %}" rel="stylesheet" type="text/css">
-    <link href="{% static "css/login.css" %}" rel="stylesheet" type="text/css">
-    <title>Login</title>
+{% block content %}
 
-</head>
-<body>
+    <!--      Логин      -->
+    <div class="container-fluid login">
+        <h1 class="text-xl-center"> Log In </h1>
 
-<nav class="navbar navbar-expand-lg navbar navbar-dark bg-primary">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="index.html">
-            <img src="../static/img/kot.jpeg" alt="logoCompany" width="60" height="60"
-                 class="d-inline-block align-text-top">
-            SlavEkAns
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="navbar-nav me-auto mb-2 mb-lg-0">
-            <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            </form>
-            <button type="button" class="btn btn-primary">Ask</button>
-        </div>
-        <form class="d-flex">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <div class="navbar-avatar">
-                        <img alt="avatar" src="../static/img/kot.jpeg" width="80" height="80">
+        <form class="row g-3 bodyMyContainer">
+            <div class="row justify-content-center blockMyContainer">
+                <div class="col-md-6">
+                    <label for="validationDefaultUsername" class="form-label">Имя пользователя</label>
+                    <div class="input-group">
+                        <span class="input-group-text" id="inputGroupPrepend2">@</span>
+                        <input type="text" class="form-control" id="validationDefaultUsername"
+                               aria-describedby="inputGroupPrepend2" required>
                     </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Log out</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" href="user_page.html">Settings</a>
-                </li>
-            </ul>
+                </div>
+            </div>
+            <div class="row justify-content-center blockMyContainer">
+                <div class="col-md-6">
+                    <label for="validationDefaultPassword" class="form-label">Пароль</label>
+                    <div class="input-group">
+                        <input type="password" class="form-control" id="validationDefaultPassword"
+                               aria-describedby="inputGroupPrepend2" required>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-6">
+                    <p>
+                        <a href="{% url 'signup' %}" class="text-primary text-decoration-none">Еще не
+                            зарегистрирован</a>
+                    </p>
+                </div>
+            </div>
+            <div class="row justify-content-center blockMyContainer">
+                <div class="col-6">
+                    <button class="btn btn-primary" type="submit">Зарегистрироваться</button>
+                </div>
+            </div>
         </form>
     </div>
-</nav>
 
-
-<div class="baseLogin">
-    <div class="row">
-        <div class="col-9">
-            <!--      Логин      -->
-            <div class="container-fluid login">
-                <h1 class="text-xl-center"> Log In </h1>
-
-                <form class="row g-3 bodyLogin">
-                    <div class="row justify-content-center loginBlock">
-                        <div class="col-md-6">
-                            <label for="validationDefaultUsername" class="form-label">Имя пользователя</label>
-                            <div class="input-group">
-                                <span class="input-group-text" id="inputGroupPrepend2">@</span>
-                                <input type="text" class="form-control" id="validationDefaultUsername"
-                                       aria-describedby="inputGroupPrepend2" required>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row justify-content-center loginBlock">
-                        <div class="col-md-6">
-                            <label for="validationDefaultPassword" class="form-label">Пароль</label>
-                            <div class="input-group">
-                                <input type="password" class="form-control" id="validationDefaultPassword"
-                                       aria-describedby="inputGroupPrepend2" required>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row justify-content-center">
-                        <div class="col-6">
-                            <p>
-                                <a href="signup.html" class="text-primary text-decoration-none">Еще не
-                                    зарегистрирован</a>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="row justify-content-center loginBlock">
-                        <div class="col-6">
-                            <button class="btn btn-primary" type="submit">Зарегистрироваться</button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-        <div class="col-3 info">
-            <div class="tags ">
-                <h2 class="font-weight-bold">Popular tags</h2>
-                <p class="text-xl-center font-monospace">
-                    <a class="text-primary">Python</a>
-                    <a>SQL</a>
-                    <a>GoooooooooooooO</a>
-                </p>
-                <p class="text-xl-center font-monospace">
-                    <a class="text-primary">Python</a>
-                    <a>SQL</a>
-                    <a>Go</a>
-                </p>
-                <p class="text-xl-center font-monospace">
-                    <a class="text-primary">Python</a>
-                    <a>SQL</a>
-                    <a>Go</a>
-                </p>
-            </div>
-            <div class="members ">
-                <h2 class="font-weight-bold">Best Members</h2>
-                <p><a href="#" class="text-info text-decoration-none">Mr Gosha</a></p>
-                <p><a href="#" class="text-info text-decoration-none">Mr Gosha</a></p>
-                <p><a href="#" class="text-info text-decoration-none">Mr Gosha</a></p>
-                <p><a href="#" class="text-info text-decoration-none">Mr Gosha</a></p>
-                <p><a href="#" class="text-info text-decoration-none">Mr Gosha</a></p>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-</body>
-</html>
+{% endblock %}
