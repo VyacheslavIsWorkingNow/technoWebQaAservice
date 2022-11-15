@@ -11,12 +11,10 @@
             <!--                            QUESTION        -->
             <div class="col-9">
                 <h5 class="card-title">From: <a href="{% url 'login' %}" class="text-decoration-none">
-                    AbraKadABra</a></h5>
+                    {{ answer.user }}</a></h5>
                 <div class="col-md-9">
                     <p class="card-text">
-                        With supporting text below as a natural lead-in to additional
-                        content. With supporting text below as a natural lead-in to additional
-                        content.
+                        {{ answer.text }}
                     </p>
                 </div>
                 <br>

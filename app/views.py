@@ -1,11 +1,11 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from django.views.decorators.http import require_GET
+from . import models
 
-# TODO: сделать все вьюхи и шаблоны
 
 def index(request):
-    return render(request, 'index.html')
+    context = {'questions': models.QUESTIONS}
+    return render(request, 'index.html', context=context)
 
 
 def hot_index(request):
@@ -17,14 +17,12 @@ def tag_index(request, your_tag: str):
 
 
 def question(request, question_id: int):
-    questions = []
-    for i in range(1, 30):
-        questions.append({
-            'title': 'title ' + str(i),
-            'id': i,
-            'text': 'text' + str(i)
-        })
-    return render(request, 'question.html')
+
+    context = {
+        'id_questions': models.QUESTIONS[question_id],
+        'ans': models.ANS,
+    }
+    return render(request, 'question.html', context=context)
 
 
 def login(request):
