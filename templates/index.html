@@ -7,12 +7,19 @@
     <!--      Страница Вопросов      -->
     <div class="container-fluid base">
         <div class="row">
-            <div class="col-4">
-                <h2> New questions </h2>
-            </div>
-            <div class="col-8">
-                <h2><a href="{% url 'index' %}" class="active text-decoration-none">Hot questions</a></h2>
-            </div>
+
+            {% if tags %}
+                <h2> Hot tags </h2>
+            {% elif tags_other %}
+                <h2> {{ tags_other.your_tag }} </h2>
+            {% else %}
+                <div class="col-4">
+                    <h2> New questions </h2>
+                </div>
+                <div class="col-8">
+                    <h2><a href="{% url 'hot_index' %}" class="active text-decoration-none">Hot questions</a></h2>
+                </div>
+            {% endif %}
         </div>
     </div>
 

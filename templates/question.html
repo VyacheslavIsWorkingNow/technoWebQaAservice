@@ -15,19 +15,10 @@
 
         <!--                            QUESTION        -->
         <div class="col-8">
-            <h4 class="">Title TitleTitle Title?</h4>
+            <h4 class="">{{ id_questions.title }}</h4>
             <div class="col-md-9">
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Etiam vitae dignissim sem. Vivamus mattis vestibulum nisl non sollicitudin.
-                    Aenean ex metus, sodales euismod fringilla in, sodales viverra libero.
-                    Etiam eu purus nec libero tempus faucibus. Morbi scelerisque scelerisque euismod.
-                    Aenean id bibendum purus. Aenean dapibus est feugiat quam tempus condimentum.
-                    Integer fermentum cursus risus, ut lacinia velit porta sagittis.
-                    Proin maximus dui hendrerit, imperdiet enim a, rhoncus magna.
-                    Pellentesque nibh neque, porta sit amet pretium id, blandit vel risus.
-                    Integer ex tellus, mattis id risus eget, facilisis semper elit.
-                    Quisque sed orci sem. Nullam ac orci in nisl tempor congue vitae vitae nisi.
+                    {{ id_questions.text }}
                 </p>
             </div>
             <br>
@@ -35,9 +26,9 @@
             <div class="row">
                 <div class="col-md-9">
                     <p class="font-monospace tagsQuestionId"> tags:
-                        <a href="#" class="text-decoration-none"> Python </a>
-                        <a href="#" class="text-decoration-none"> Python </a>
-                        <a href="#" class="text-decoration-none"> Python </a>
+                        {% include 'inc/tags.html' %}
+                        {% include 'inc/tags.html' %}
+                        {% include 'inc/tags.html' %}
                     </p>
                 </div>
             </div>

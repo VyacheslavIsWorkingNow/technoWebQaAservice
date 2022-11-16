@@ -9,11 +9,18 @@ def index(request):
 
 
 def hot_index(request):
-    return HttpResponse(f' tag = hooot')
+    hot_index_index = True
+    context = {'questions': models.QUESTIONS,
+               'tags': hot_index_index
+               }
+    return render(request, 'index.html', context=context)
 
 
 def tag_index(request, your_tag: str):
-    return HttpResponse(f'tag = {your_tag}')
+    context = {'questions': models.QUESTIONS,
+               'tags_other': your_tag
+               }
+    return render(request, 'index.html', context=context)
 
 
 def question(request, question_id: int):
