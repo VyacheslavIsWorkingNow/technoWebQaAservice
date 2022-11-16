@@ -1,0 +1,58 @@
+{% extends "inc/base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+    <div class="container-fluid">
+        <h1> New question </h1>
+        <form class="row g-3 bodyMyContainer">
+            <div class="row justify-content-center blockMyContainer">
+                <div class="col-md-2">
+                    <h4><label for="askTitle" class="form-label">Title</label></h4>
+                </div>
+                <div class="col-md-10">
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="askTitle" maxlength="100"
+                               placeholder="Your question name" aria-describedby="AskName" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row justify-content-center blockMyContainer">
+                <div class="col-md-2">
+                    <h4><label for="textAsk" class="form-label">Text</label></h4>
+                </div>
+                <div class="col-md-10">
+                    <div class="input-group">
+                                <textarea class="form-control" id="textAsk" rows="4"
+                                          placeholder="Question description" aria-describedby="AskText" required
+                                          maxlength="2000"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row justify-content-center blockMyContainer">
+                <div class="col-md-2">
+                    <h4><label for="tagsAsk" class="form-label">Tags</label></h4>
+                </div>
+                <div class="col-md-10">
+                    <div class="input-group">
+                                <textarea class="form-control" id="tagsAsk" rows="2"
+                                          placeholder="Tags" aria-describedby="tagsAsk" required
+                                          maxlength="150"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row justify-content-center blockMyContainer">
+                <div class="col-md-8">
+                    <button type="submit" class="btn btn-primary">Ask!</button>
+                </div>
+            </div>
+
+        </form>
+    </div>
+
+
+{% endblock %}

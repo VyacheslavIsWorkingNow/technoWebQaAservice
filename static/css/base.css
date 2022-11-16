@@ -19,3 +19,12 @@ img {
     padding: 5px;
     line-height: 90%;
 }
+
+.blockMyContainer {
+    padding: 10px;
+}
+
+.bodyMyContainer {
+    margin: 5px;
+    padding: 10px;
+}

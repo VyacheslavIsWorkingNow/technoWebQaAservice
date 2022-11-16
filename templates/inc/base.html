@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <link href="{% static "css/bootstrap.css" %}" rel="stylesheet" type="text/css">
+    <link href="{% static "css/base.css" %}" rel="stylesheet" type="text/css">
+    <title>BASE</title>
+</head>
+<body>
+
+
+<!-- не авторизированный -->
+
+{#<nav class="navbar navbar-expand-lg navbar navbar-dark bg-primary">#}
+{#    <div class="container-fluid">#}
+{#        <a class="navbar-brand" href="#">#}
+{#            <img src="{% static "img/kot.jpeg" %}" alt="logoCompany" width="60" height="60"#}
+{#                 class="d-inline-block align-text-top">#}
+{#            SlavEkAns#}
+{#        </a>#}
+{#        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"#}
+{#                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">#}
+{#            <span class="navbar-toggler-icon"></span>#}
+{#        </button>#}
+{#        <div class="navbar-nav me-auto mb-2 mb-lg-0">#}
+{#            <form class="d-flex">#}
+{#                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">#}
+{#            </form>#}
+{#            <button type="button" class="btn btn-primary">Ask</button>#}
+{#        </div>#}
+{#        <form class="d-flex">#}
+{#            <ul class="navbar-nav me-auto mb-2 mb-lg-0">#}
+{#                <li class="nav-item">#}
+{#                    <a class="nav-link active" aria-current="page" href="../login.html">Log in</a>#}
+{#                </li>#}
+{#                <li class="nav-item">#}
+{#                    <a class="nav-link active" href="../signup.html">Register</a>#}
+{#                </li>#}
+{#            </ul>#}
+{#        </form>#}
+{#    </div>#}
+{#</nav>#}
+
+<!-- авторизированный -->
+
+<nav class="navbar navbar-expand-lg navbar navbar-dark bg-primary">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="{% url 'index' %}">
+            <img src="{% static "img/kot.jpeg" %}" alt="logoCompany" width="60" height="60"
+                 class="d-inline-block align-text-top">
+            SlavEkAns
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-nav me-auto mb-2 mb-lg-0">
+            <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            </form>
+            <button type="button" class="btn btn-primary">Ask</button>
+        </div>
+        <form class="d-flex">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <div class="navbar-avatar">
+                        <img alt="avatar" src="{% static "img/kot.jpeg" %}" width="60" height="60">
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Log out</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="{% url 'user' %}">Settings</a>
+                </li>
+            </ul>
+        </form>
+    </div>
+</nav>
+
+
+<div class="base">
+    <div class="row">
+        <div class="col-9 body">
+
+            {#            Сюда пробрасываем страницу #}
+
+
+            {% block content %}
+            {% endblock %}
+
+
+            {#            Сюда пробрасываем страницу #}
+
+        </div>
+
+{#        TODO: поправить теги, чтобы кидали на страницу с тегами #}
+        <div class="col-3 info">
+            <div class="tags ">
+                <h2 class="font-weight-bold">Popular tags</h2>
+                <p class="text-xl-center font-monospace text-primary">
+                    {% include 'inc/tags.html' %}
+                    {% include 'inc/tags.html' %}
+                    {% include 'inc/tags.html' %}
+                </p>
+                <p class="text-xl-center font-monospace text-primary">
+                    {% include 'inc/tags.html' %}
+                    {% include 'inc/tags.html' %}
+                    {% include 'inc/tags.html' %}
+                </p>
+                <p class="text-xl-center font-monospace text-primary">
+                    {% include 'inc/tags.html' %}
+                    {% include 'inc/tags.html' %}
+                    {% include 'inc/tags.html' %}
+                </p>
+            </div>
+            <div class="members ">
+                <h2 class="font-weight-bold">Best Members</h2>
+                <p><a href="#" class="text-info text-decoration-none">Mr Gosha</a></p>
+                <p><a href="#" class="text-info text-decoration-none">Mr Gosha</a></p>
+                <p><a href="#" class="text-info text-decoration-none">Mr Gosha</a></p>
+                <p><a href="#" class="text-info text-decoration-none">Mr Gosha</a></p>
+                <p><a href="#" class="text-info text-decoration-none">Mr Gosha</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>

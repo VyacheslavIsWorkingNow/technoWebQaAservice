@@ -1,0 +1,67 @@
+{% extends "inc/base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+    <!--      Страница вопроса      -->
+    <div class="row p-3 border-bottom">
+
+        <!--                            USER PROFILE    -->
+
+        {% include 'inc/user_profile_question.html' %}
+
+        <!--                -->
+
+        <!--                            QUESTION        -->
+        <div class="col-8">
+            <h4 class="">{{ id_questions.title }}</h4>
+            <div class="col-md-9">
+                <p>
+                    {{ id_questions.text }}
+                </p>
+            </div>
+            <br>
+
+            <div class="row">
+                <div class="col-md-9">
+                    <p class="font-monospace tagsQuestionId"> tags:
+                        {% include 'inc/tags.html' %}
+                        {% include 'inc/tags.html' %}
+                        {% include 'inc/tags.html' %}
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!--      Страница ответов      -->
+
+    <div class="answersQuestion border-bottom">
+
+    {% for answer in ans %}
+        {% include 'inc/ans_item.html' %}
+    {% endfor %}
+
+    </div>
+
+    <!--      написать вопрос     -->
+
+    <div class="writeAnswer container-fluid p-3">
+        <form>
+            <label class="text-info" for="textAsk">Your answer</label>
+            <div class="input-group">
+                    <textarea class="form-control p-2" id="textAsk" rows="4"
+                              placeholder="Question description" aria-describedby="AskText" required
+                              maxlength="2000">Hello! </textarea>
+            </div>
+
+            <div class="p-2">
+                <button type="submit" class="btn btn-primary">Answer!</button>
+            </div>
+        </form>
+
+    </div>
+
+{% endblock %}

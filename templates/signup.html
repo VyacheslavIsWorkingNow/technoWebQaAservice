@@ -1,0 +1,106 @@
+{% extends "inc/base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+    <div class="container-fluid login">
+        <h1 class="text-xl-center"> SignUp </h1>
+
+        <form class="row g-3 bodySignUp">
+
+            <div class="row justify-content-center blockMyContainer">
+                <div class="col-md-10">
+                    <h5 class="text-danger">
+                        password don`t match
+                    </h5>
+                </div>
+
+            </div>
+
+            <div class="row justify-content-center blockMyContainer">
+                <div class="col-md-4">
+                    <h3><label for="validationUsername" class="form-label">Login</label></h3>
+                </div>
+                <div class="col-md-6">
+                    <div class="input-group">
+                        <span class="input-group-text" id="Username">@</span>
+                        <input type="text" maxlength="20" class="form-control" id="validationUsername"
+                               aria-describedby="Username" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row justify-content-center blockMyContainer">
+                <div class="col-md-4">
+                    <h3><label for="validationEmail" class="form-label">Email</label></h3>
+                </div>
+                <div class="col-md-6">
+                    <div class="input-group">
+                        <input type="email" maxlength="30" class="form-control" id="validationEmail"
+                               aria-describedby="Email" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row justify-content-center blockMyContainer">
+                <div class="col-md-4">
+                    <h3><label for="validationNick" class="form-label">NickName</label></h3>
+                </div>
+                <div class="col-md-6">
+                    <div class="input-group">
+                        <input type="text" maxlength="16" class="form-control" id="validationNick"
+                               aria-describedby="NickName" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row justify-content-center blockMyContainer">
+                <div class="col-md-4">
+                    <h3><label for="validationPassword" class="form-label">Password</label></h3>
+                </div>
+                <div class="col-md-6">
+                    <div class="input-group">
+                        <input type="password" maxlength="26" class="form-control" id="validationPassword"
+                               aria-describedby="Password" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row justify-content-center blockMyContainer">
+                <div class="col-md-4">
+                    <h3><label for="validationPasswordAgain" class="form-label">Password again</label></h3>
+                </div>
+                <div class="col-md-6">
+                    <div class="input-group">
+                        <input type="password" maxlength="26" class="form-control" id="validationPasswordAgain"
+                               aria-describedby="PasswordAgain" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row justify-content-center blockMyContainer">
+                <div class="col-md-4">
+                    <h3><label for="validationAvatar" class="form-label">Choose avatar</label></h3>
+                </div>
+                <div class="col-md-6">
+                    <div class="input-group">
+                        <input class="form-control" type="file" id="validationAvatar"
+                               aria-describedby="PasswordAgain" required>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row justify-content-center blockMyContainer">
+                <div class="col-md-10">
+                    <button type="submit" class="btn btn-primary">Register!</button>
+                </div>
+            </div>
+
+
+        </form>
+    </div>
+
+{% endblock %}

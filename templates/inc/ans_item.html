@@ -1,0 +1,29 @@
+{% load static %}
+
+<div class="card m-3">
+    <div class="card-body">
+        <div class="row">
+
+            <!--                            USER PROFILE    -->
+
+            {% include 'inc/user_profile_question.html' %}
+
+            <!--                            QUESTION        -->
+            <div class="col-9">
+                <h5 class="card-title">From: <a href="{% url 'login' %}" class="text-decoration-none">
+                    {{ answer.user }}</a></h5>
+                <div class="col-md-9">
+                    <p class="card-text">
+                        {{ answer.text }}
+                    </p>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-md-3">
+                        <a class="btn btn-primary">Best decision</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

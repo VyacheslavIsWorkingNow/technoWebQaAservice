@@ -1,0 +1,89 @@
+{% extends "inc/base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+    <div class="container-fluid login">
+        <h1 class="text-xl-center Settings"> Settings: User </h1>
+
+        <form class="row g-3 bodySignUp">
+
+            <div class="row justify-content-center blockMyContainer">
+                <div class="col-md-10">
+                    <h5 class="text-danger">
+                        a email already register
+                    </h5>
+                </div>
+
+            </div>
+
+            <div class="row justify-content-center blockMyContainer">
+                <div class="col-md-4">
+                    <h3><label for="loginSettings" class="form-label">Login</label></h3>
+                </div>
+                <div class="col-md-6">
+                    <div class="input-group">
+                        <span class="input-group-text" id="Login">@</span>
+                        <textarea type="text" maxlength="40" class="form-control" id="loginSettings"
+                                  rows="1"
+                                  aria-describedby="Login" placeholder="Nickname">YourLogin</textarea>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row justify-content-center blockMyContainer">
+                <div class="col-md-4">
+                    <h3><label for="settingsEmail" class="form-label">Email</label></h3>
+                </div>
+                <div class="col-md-6">
+                    <div class="input-group">
+                                <textarea type="email" maxlength="30" class="form-control" id="settingsEmail"
+                                          rows="1"
+                                          aria-describedby="Email" placeholder="Email">Email@mail.ru</textarea>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row justify-content-center blockMyContainer">
+                <div class="col-md-4">
+                    <h3><label for="settingsUsername" class="form-label">NickName</label></h3>
+                </div>
+                <div class="col-md-6">
+                    <div class="input-group">
+                                <textarea type="text" maxlength="20" class="form-control" id="settingsUsername"
+                                          rows="1"
+                                          aria-describedby="Username" placeholder="Nickname">NickName</textarea>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row justify-content-center blockMyContainer">
+                <div class="col-md-4">
+                    <h3><label for="validationAvatar" class="form-label">Upload avatar</label></h3>
+                </div>
+                <div class="col-md-6">
+                    <div class="blockMyContainer">
+                        <img src="{% static "img/kot.jpeg" %}" width="300" height="400" alt="ava">
+                    </div>
+                    <div class="input-group">
+                        <input class="form-control" type="file" id="validationAvatar"
+                               aria-describedby="Avatar">
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row justify-content-center blockMyContainer">
+                <div class="col-md-10">
+                    <button type="submit" class="btn btn-primary">Save!</button>
+                </div>
+            </div>
+
+
+        </form>
+    </div>
+
+{% endblock %}
